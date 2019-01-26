@@ -1,0 +1,143 @@
+body {
+    padding:1rem;
+    margin: 1rem;
+    font-family: 'Playfair Display', serif;
+
+  }
+  
+.jumbotron {
+    margin-bottom: 0;
+    font-weight: 200;
+
+    h1, p{
+        color: black;
+    }
+    // background: black;
+}
+  
+  /* img {
+    height: 100px;
+    width: 620px;
+  
+  } */
+  
+  
+  .padding-0{
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  
+  
+  
+  .container {
+    position: relative;
+    padding: 0;
+    margin:0;
+  
+  }
+  
+  .image {
+    padding: 0;
+    margin:0;
+    opacity: 1;
+    // display: block;
+    width: 900;
+    height: 400;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .container:hover .image {
+    opacity: 0.3;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: 16px 32px;}
+
+
+
+
+#navBar.scrolled {
+        background: white;
+        transition: background 600ms; }
+ #navBar.scrolled .nav-link {
+          color: black; }
+#navBar.scrolled .navbar-brand h3 {
+          color: black; }
+        
+
+
+@media (max-width: 768px) and (min-height: 1px) {
+  .navbar {
+    background: white; }
+
+  .navbar-brand h3 {
+    color: black !important;
+}
+
+  .nav-item {
+    font-size: 1.4rem;
+    color: black !important; }
+
+  .nav-link {
+    color: black !important; }
+
+  .nav-link:hover {
+    border-bottom: none; }
+
+  }
+
+
+  .post-body {
+    font-family: 'EB Garamond', serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 1.444rem;
+    }
+
+
+
+
+  .icon{
+    height: 50px;
+    width: 50px;
+  }
+
+  textarea { 
+    height: auto; 
+  }
+
+  a:any-link{
+    color: black;
+  }
+
+.about {
+  font-size: 1.3rem;
+}
+
+#post {
+  p{
+    text-indent: 2%;
+    line-height: 1.1;
+     margin-bottom: 5px;
+  }
+}

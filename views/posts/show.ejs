@@ -1,0 +1,46 @@
+
+
+
+
+<% include ../partials/header %>
+<title><%=post.name %> | College Project</title>
+
+<div class="row justify-content-center py-2">
+</p>
+<% if(currentUser){ %>
+    <a class="btn btn-warning" href="/post/<%= post._id%>/edit">Edit</a>
+    <form id="delete-form" action="/post/<%= post._id%>/?_method=DELETE" method="POST">
+        <button class="btn btn-danger">Delete!</button>
+    </form>
+<% }    %>
+</div>
+
+
+<div class="text-center justify-content-center d-flex flex-wrap  px-1 ">
+    
+  
+        <div class="col-lg-12 py-4 container">
+
+          <img src="/images/<%= post.images[0] %>" alt="" class="img-fluid display-image">
+  
+          <h1 class="pt-4  mt-4"><%= post.name %></h1>
+          
+        </div>
+        <div class="text-left row mx-1 px-1 my-1 py-1 post-body justify-content-center">
+
+
+          <div class="col-lg-8  col-md-10 col-sm-12 " id="post">
+            <%-post.body %>
+          </div>
+         
+        </div>
+        
+  </div>
+  
+
+
+
+
+
+
+<% include ../partials/footer %>
