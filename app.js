@@ -1,5 +1,7 @@
 var createError = require('http-errors');
 var express = require('express');
+const helmet = require('helmet')
+
 var path = require('path');
 var bodyParser = require("body-parser");
 var passport = require("passport");
@@ -10,7 +12,6 @@ var User = require("./models/user")
 var Post = require("./models/post2")
 var mongoose = require("mongoose");
 const port = process.env.PORT || 3000;
-// var cookieParser = require('cookie-parser');
 
 
 
@@ -18,6 +19,7 @@ var postsRoutes = require('./routes/posts');
 var indexRoutes = require('./routes/index');
 
 var app = express();
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
