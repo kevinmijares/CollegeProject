@@ -1,0 +1,4 @@
+node_modules/
+public/stylesheets/*
+!public/stylesheets/main.css
+!public/stylesheets/main.css.map
