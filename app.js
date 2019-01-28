@@ -19,7 +19,6 @@ var postsRoutes = require('./routes/posts');
 var indexRoutes = require('./routes/index');
 
 var app = express();
-app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -28,7 +27,8 @@ app.set('view engine', 'ejs');
 // app.use(logger('dev'));
 // app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cookieParser());
+// app.use(cookieParser());app.use(helmet());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
@@ -58,6 +58,7 @@ app.use(methodOverride("_method"));
 
 
 
+app.use(helmet());
 
 app.use("/post",postsRoutes)
 app.use(indexRoutes)
