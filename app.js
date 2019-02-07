@@ -67,12 +67,22 @@ app.use(function(req, res, next){
   next();
 })
 
+// var newUser  = new User({username: })
+// User.register(newUser,, function(err, user){
+
+//   if(err){
+//     console.log(err)
+//   }
+//   else{
+//     console.log(user)
+//   }
+// })
 
 
 
 
 app.use("*", function(req,res){
-  res.render("404")
+  res.status(404).render("404")
 })
 
 app.listen(port, function(){

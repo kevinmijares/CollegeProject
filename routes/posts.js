@@ -44,7 +44,7 @@ router.get("/:id", function(req,res){
     Post.findById(req.params.id).exec(function(err, foundPost){
         if(err){
 
-            res.render("404")
+            res.status(404).render("404")
 
             console.log(err)
             
@@ -52,7 +52,7 @@ router.get("/:id", function(req,res){
         else{
             console.log(foundPost)
             if(foundPost == null){
-                res.render("404")
+                res.status(404).render("404")
             }
             res.render("posts/show", {post:foundPost})
         }
