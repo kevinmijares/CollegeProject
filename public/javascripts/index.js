@@ -15,11 +15,11 @@ $(function (){
                 $("#loadButton").text("No More Posts") 
             }
             else{
-                for(i; (i <= reversePosts.length - 1) && (i <= postsLoaded+ 3) ; i++){
+                for(i; (i <= reversePosts.length - 1) && (i < postsLoaded+ 3) ; i++){
                     console.log(reversePosts.length)
                     console.log(i)
 
-                    $("#postsContainer").append('<div class="col-lg-2 col-md-4 col-sm-6 padding-0 container> <a href="/post/' +reversePosts[i]._id + '"><img src="/images/' + reversePosts[i].images[0]+ '" class="img-fluid "></a><div class="middle"><a href="/post/' +reversePosts[i]._id+'"><div class="text">' + reversePosts[i].name + '</div></a></div></div>')
+                    $("#postsContainer").append('<div class="col-lg-2 col-md-4 col-sm-6 padding-0 container"> <a href="/post/' +reversePosts[i]._id + '"><img src="/images/' + reversePosts[i].images[0]+ '" class="img-fluid "></a><div class="middle"><a href="/post/' +reversePosts[i]._id+'"><div class="text">' + reversePosts[i].name + '</div></a></div></div>')
                 }
                 postsLoaded = i;
                      
