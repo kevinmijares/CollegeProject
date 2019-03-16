@@ -2,11 +2,11 @@
 <title> Home | College Project</title>
 
 
-  <div class="row text-center justify-content-center d-flex flex-wrap py-4 ">
+  <div id="postsContainer" class="row text-center justify-content-center d-flex flex-wrap py-4 ">
     
   
   
-  <% posts.slice().reverse().forEach(function(post){ %>
+  <% posts.slice().forEach(function(post){ %>
 
       <div class="col-lg-2 col-md-4 col-sm-6 padding-0 container">
 
@@ -22,8 +22,12 @@
    <% }) %>
       
 
+  </div>
+  <div class=" text-center justify-content-center">
+    <button id="loadButton" class="btn btn-white">Load More Posts</button>
 
   </div>
+
 
 
 <% include partials/footer %>

@@ -6,18 +6,12 @@ var passport = require("passport")
 
 /* GET home page. ROOT ROUTE */
 router.get('/', function(req, res, next) {
-  
-  Post.find({}, function(err, posts){
-
-    if(err){
-      console.log(err);
-    }
-
-    else {
-      res.render("index", {posts:posts})
-    }
-
-  })
+  Post.find().limit(8).sort({$natural:-1})
+  .then(function(posts){
+    res.render("index", {posts:posts})
+  }).catch(function(err){
+    res.send(err);
+  })  
 
 });
 

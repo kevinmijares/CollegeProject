@@ -5,7 +5,15 @@ var middleware = require("../middleware")
 
 
 
-
+router.get("/api", function(req,res){
+    Post.find().sort({$natural:-1})
+    .then(function(posts){
+        res.json(posts);
+    })
+    .catch(function(err){
+        res.send(err)
+    });
+})
 
 
 
@@ -98,6 +106,8 @@ router.delete("/:id", middleware.isLoggedIn, function(req,res){
         }
     })
 })
+
+
 
 
 module.exports = router;
